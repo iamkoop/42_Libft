@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nildruon <nildruon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/06 15:25:03 by nildruon          #+#    #+#             */
-/*   Updated: 2025/10/16 21:39:57 by nildruon         ###   ########.fr       */
+/*   Created: 2025/09/30 13:42:34 by nildruon          #+#    #+#             */
+/*   Updated: 2026/03/16 12:33:05 by nildruon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-void	ft_bzero(void *s, size_t n)
+size_t	ft_strlen(const char *s)
 {
-	ft_memset(s, '\0', n);
+	size_t	size;
+
+	size = 0;
+	if (!s)
+		return (0);
+	while (s[size])
+	{
+		size++;
+	}
+	return (size);
 }
 
-/*
-#include <unistd.h>
-int main(void)
+/*int	main(void)
 {
-	char str[] = "JUUUUUUUUUUUUUUUUUUUUUUUMP";
-	write(1,&str,10);
-	ft_bzero(str, 5);
-	write(1,&str,10);
+	printf("%zu\n", ft_strlen("WEEE"));
+	printf("%zu\n", ft_strlen(" "));
+	printf("%zu\n", ft_strlen("a"));
+	printf("%zu\n", ft_strlen("\0"));
 }*/

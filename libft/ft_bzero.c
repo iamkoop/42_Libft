@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nildruon <nildruon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nilsdruon <nilsdruon@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 16:22:03 by nildruon          #+#    #+#             */
-/*   Updated: 2025/10/17 18:16:53 by nildruon         ###   ########.fr       */
+/*   Created: 2025/10/06 15:25:03 by nildruon          #+#    #+#             */
+/*   Updated: 2026/02/01 19:57:20 by nilsdruon        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	ft_memset(s, '\0', n);
 }
+
 /*
-#include <stdio.h>
-int	main(void)
+#include <unistd.h>
+int main(void)
 {
-	printf("%d\n", ft_isdigit(3));
-	printf("%d\n", ft_isdigit('0'));
-	printf("%d\n", ft_isdigit(120));
-}
-*/
+	char str[] = "JUUUUUUUUUUUUUUUUUUUUUUUMP";
+	write(1,&str,10);
+	ft_bzero(str, 5);
+	write(1,&str,10);
+}*/

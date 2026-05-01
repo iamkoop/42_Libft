@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   pointer_converter.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nildruon <nildruon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 13:42:34 by nildruon          #+#    #+#             */
-/*   Updated: 2025/10/09 12:01:11 by nildruon         ###   ########.fr       */
+/*   Created: 2025/10/27 21:01:06 by nildruon          #+#    #+#             */
+/*   Updated: 2026/02/04 15:06:32 by nildruon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int	print_pointer(void *ptr)
 {
-	size_t	size;
+	uintptr_t	nb;
+	int			len;
 
-	size = 0;
-	while (s[size])
+	if (!ptr)
 	{
-		size++;
+		ft_putstr_fd("(nil)", 1);
+		return (5);
 	}
-	return (size);
+	nb = (uintptr_t)ptr;
+	ft_putstr_fd("0x", 1);
+	len = 2 + print_hex('x', nb, 0);
+	return (len);
 }
-
-/*int	main(void)
-{
-	printf("%zu\n", ft_strlen("WEEE"));
-	printf("%zu\n", ft_strlen(" "));
-	printf("%zu\n", ft_strlen("a"));
-	printf("%zu\n", ft_strlen("\0"));
-}*/
