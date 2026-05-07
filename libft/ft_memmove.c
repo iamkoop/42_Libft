@@ -6,7 +6,7 @@
 /*   By: nildruon <nildruon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 17:34:18 by nildruon          #+#    #+#             */
-/*   Updated: 2025/10/16 21:24:37 by nildruon         ###   ########.fr       */
+/*   Updated: 2026/05/07 12:04:21 by nildruon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
 	i = 0;
-	if (dest > src)
+	if ((uintptr_t)dest > (uintptr_t)src)
 	{
 		while (n-- > 0)
 			d[n] = s[n];
