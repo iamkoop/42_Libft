@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_singe_lstadd_front.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nildruon <nildruon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 12:27:12 by nilsdruon         #+#    #+#             */
-/*   Updated: 2026/02/05 13:58:14 by nildruon         ###   ########.fr       */
+/*   Updated: 2026/05/08 15:29:36 by nildruon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_stack **lst, t_stack *new)
+void	ft_single_lstadd_front(t_single_linked_node **lst,
+		t_single_linked_node *new)
 {
 	new->next = *lst;
 	*lst = new;

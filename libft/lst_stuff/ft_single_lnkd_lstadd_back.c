@@ -1,36 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_single_lnkd_lstadd_back.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nildruon <nildruon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/19 12:27:16 by nilsdruon         #+#    #+#             */
-/*   Updated: 2026/02/05 13:58:21 by nildruon         ###   ########.fr       */
+/*   Created: 2026/01/19 12:55:23 by nilsdruon         #+#    #+#             */
+/*   Updated: 2026/05/08 14:49:40 by nildruon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_stack *lst)
+void	ft_lstadd_back_single_linked(t_single_linked_node **lst,
+			t_single_linked_node *new)
 {
-	int	i;
+	t_single_linked_node	*l;
 
-	i = 0;
-	while (lst)
+	if (!lst || !new)
+		return ;
+	if (!*lst)
 	{
-		lst = lst->next;
-		i++;
+		*lst = new;
 	}
-	return (i);
+	else
+	{
+		l = *lst;
+		while (l->next)
+		{
+			l = l->next;
+		}
+		l->next = new;
+	}
 }
 
 /* #include <stdio.h>
 int main()
 {
     t_list *head;
+    t_list *newlist = NULL;
     t_list *new = ft_lstnew("H");
     t_list *new2 = ft_lstnew("E");
+    t_list *addback = ft_lstnew("L");
     t_list *newtest;
     head=new;
     new->next=new2;
@@ -41,8 +52,13 @@ int main()
         printf("%s", (char *)newtest->content);
         newtest=newtest->next;
     }
-    printf("\n");
-    printf("%d", ft_lstsize(NULL));
-    printf("\n");
+    ft_lstadd_back(&head,addback);
+    newtest=head;
+    printf("\n-------------------------------------------\n");
+    while (newtest)
+    {
+        printf("%s", (char *)newtest->content);
+        newtest=newtest->next;
+    }
     return(0);
 } */

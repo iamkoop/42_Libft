@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nildruon <nildruon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/19 12:37:36 by nilsdruon         #+#    #+#             */
-/*   Updated: 2026/02/05 18:12:47 by nildruon         ###   ########.fr       */
+/*   Created: 2026/01/19 12:27:16 by nilsdruon         #+#    #+#             */
+/*   Updated: 2026/05/08 15:05:08 by nildruon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_stack	*ft_lstlast(t_stack *lst)
+int	ft_single_lstsize(t_single_linked_node *lst)
 {
-	t_stack	*l;
+	int	i;
 
-	if (!lst)
-		return (NULL);
-	l = lst;
-	while (l->next)
+	i = 0;
+	while (lst)
 	{
-		l = l->next;
+		lst = lst->next;
+		i++;
 	}
-	return (l);
+	return (i);
 }
 
 /* #include <stdio.h>
 int main()
 {
     t_list *head;
-    t_list *new = ft_lstnew("E");
-    t_list *new2 = ft_lstnew("L");
-    t_list *addfr = ft_lstnew("H");
+    t_list *new = ft_lstnew("H");
+    t_list *new2 = ft_lstnew("E");
     t_list *newtest;
     head=new;
     new->next=new2;
@@ -43,13 +41,8 @@ int main()
         printf("%s", (char *)newtest->content);
         newtest=newtest->next;
     }
-    printf("%s", (char *)ft_lstlast(head)->content);
-    newtest=head;
-    printf("\n-------------------------------------------\n");
-    while (newtest)
-    {
-        printf("%s", (char *)newtest->content);
-        newtest=newtest->next;
-    }
+    printf("\n");
+    printf("%d", ft_lstsize(NULL));
+    printf("\n");
     return(0);
 } */

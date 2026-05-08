@@ -6,18 +6,18 @@
 /*   By: nildruon <nildruon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 19:33:43 by nilsdruon         #+#    #+#             */
-/*   Updated: 2026/02/25 16:52:00 by nildruon         ###   ########.fr       */
+/*   Updated: 2026/05/08 15:33:27 by nildruon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-void	ft_lstclear(t_stack **lst)
+void	ft_looped_lstclear(t_double_linked_node **lst)
 {
-	t_stack	*first;
-	t_stack	*nxt;
-	t_stack	*curr;
+	t_double_linked_node	*first;
+	t_double_linked_node	*nxt;
+	t_double_linked_node	*curr;
 
 	first = *lst;
 	curr = *lst;
