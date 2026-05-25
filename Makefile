@@ -6,7 +6,7 @@
 #    By: nildruon <nildruon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 14:28:47 by nildruon          #+#    #+#              #
-#    Updated: 2026/05/08 15:37:30 by nildruon         ###   ########.fr        #
+#    Updated: 2026/05/25 15:37:03 by nildruon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ libft/ft_atoi.c libft/ft_atol.c libft/ft_isalpha.c libft/ft_itoa.c libft/ft_memm
 libft/ft_bzero.c libft/ft_isascii.c libft/ft_memchr.c libft/ft_memset.c libft/ft_putstr_fd.c libft/ft_striteri.c libft/ft_strlen.c libft/ft_strrchr.c libft/ft_toupper.c \
 libft/ft_calloc.c libft/ft_isdigit.c libft/ft_memcmp.c libft/ft_putchar_fd.c libft/ft_split.c libft/ft_strjoin.c libft/ft_strjoin_three.c libft/ft_strmapi.c libft/ft_strtrim.c \
 libft/lst_stuff/ft_double_lstnew.c libft/lst_stuff/ft_loop_dbl_lstadd.c libft/lst_stuff/ft_lstclear.c libft/lst_stuff/ft_lstdelone.c libft/lst_stuff/ft_lstnew_single.c \
-libft/lst_stuff/ft_lstsize.c libft/lst_stuff/ft_singe_lstadd_front.c libft/lst_stuff/ft_single_lnkd_lstadd_back.c
+libft/lst_stuff/ft_lstsize.c libft/lst_stuff/ft_singe_lstadd_front.c libft/lst_stuff/ft_single_lnkd_lstadd_back.c libft/lst_stuff/ft_single_lstclear.c
 
 PRINTF = printf/ft_printf.c printf/hex_converter.c printf/pointer_converter.c printf/putnbr_u_int.c
 

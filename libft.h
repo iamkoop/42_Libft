@@ -6,7 +6,7 @@
 /*   By: nildruon <nildruon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 16:21:27 by nildruon          #+#    #+#             */
-/*   Updated: 2026/05/08 15:35:04 by nildruon         ###   ########.fr       */
+/*   Updated: 2026/05/25 20:51:22 by nildruon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void					ft_putchar_fd(char c, int fd);
 void					ft_putendl_fd(char *s, int fd);
 void					ft_putnbr_fd(int n, int fd);
 void						ft_putstr_fd(char *s, int fd);
+void					*ft_free_unfished_array_of_strings(char **s, int i);
 char					**ft_split(char const *s, char c);
 char					*ft_strchr(const char *s, int c);
 char					*ft_strdup(const char *s);
@@ -73,14 +74,14 @@ int						ft_tolower(int c);
 int						ft_toupper(int c);
 t_single_linked_node	*ft_single_lstnew(void *content);
 t_double_linked_node	*ft_double_lstnew(void *content);
-void	ft_loop_dbl_lstadd(t_double_linked_node **lst,
-			t_double_linked_node *new_node);
-t_single_linked_node	*ft_lstlast_single_linked(t_single_linked_node *lst);
-void	ft_lstadd_back_single_linked(t_single_linked_node **lst,
+void					ft_loop_dbl_lstadd(t_double_linked_node **lst,
+					t_double_linked_node *new_node);
+void					ft_single_lstclear(t_single_linked_node **lst, void (*del)(void*));
+void					ft_lstadd_back_single_linked(t_single_linked_node **lst,
 			t_single_linked_node *new);
-void	ft_single_lstadd_front(t_single_linked_node **lst,
+void					ft_single_lstadd_front(t_single_linked_node **lst,
 		t_single_linked_node *new);
-int	ft_single_lstsize(t_single_linked_node *lst);
+int		ft_single_lstsize(t_single_linked_node *lst);
 void	ft_looped_lstclear(t_double_linked_node **lst);
 // Printf
 int					print_hex(char c, uintptr_t nb, int len);

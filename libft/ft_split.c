@@ -6,7 +6,7 @@
 /*   By: nildruon <nildruon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 11:57:31 by nildruon          #+#    #+#             */
-/*   Updated: 2026/05/06 13:15:31 by nildruon         ###   ########.fr       */
+/*   Updated: 2026/05/25 21:39:10 by nildruon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static int	word_length(char const *s, char del)
 	return (cnt);
 }
 
-static void	*freeup(char **s, int i)
+void	*ft_free_unfished_array_of_strings(char **s, int i)
 {
 	while (--i >= 0)
 		free(s[i]);
@@ -65,7 +65,7 @@ char	**ft_split(char const *s, char c)
 		{
 			splitted[j] = ft_substr(s, i, word_length(&s[i], c));
 			if (!splitted[j])
-				return (freeup(splitted, j));
+				return (ft_free_unfished_array_of_strings(splitted, j));
 			j++;
 			i += word_length(&s[i], c);
 		}
