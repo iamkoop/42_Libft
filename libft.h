@@ -6,7 +6,7 @@
 /*   By: nildruon <nildruon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 16:21:27 by nildruon          #+#    #+#             */
-/*   Updated: 2026/05/25 20:51:22 by nildruon         ###   ########.fr       */
+/*   Updated: 2026/05/29 20:05:52 by nildruon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ typedef struct s_double_linked_node
 
 int						ft_atoi(const char *nptr);
 long					ft_atol(const char *nptr);
+long long				ft_atoll(const char *nptr);
 void					ft_bzero(void *s, size_t n);
 void					*ft_calloc(size_t nmemb, size_t size);
 int						ft_isalnum(int c);
