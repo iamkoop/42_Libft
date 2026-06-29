@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nildruon <nildruon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nilsdruon <nilsdruon@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 16:21:27 by nildruon          #+#    #+#             */
-/*   Updated: 2026/05/29 20:05:52 by nildruon         ###   ########.fr       */
+/*   Updated: 2026/06/29 15:36:56 by nilsdruon        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ char					*ft_strtrim(char const *s1, char const *set);
 char					*ft_substr(char const *s, unsigned int start, size_t len);
 int						ft_tolower(int c);
 int						ft_toupper(int c);
+size_t					ft_get_biggest_size_for_cmp(char    *s1, char   *s2);
 t_single_linked_node	*ft_single_lstnew(void *content);
 t_double_linked_node	*ft_double_lstnew(void *content);
 void					ft_loop_dbl_lstadd(t_double_linked_node **lst,
