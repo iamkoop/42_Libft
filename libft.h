@@ -6,7 +6,7 @@
 /*   By: nilsdruon <nilsdruon@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 16:21:27 by nildruon          #+#    #+#             */
-/*   Updated: 2026/06/29 19:18:18 by nilsdruon        ###   ########.fr       */
+/*   Updated: 2026/07/06 12:49:04 by nilsdruon        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void					ft_putnbr_fd(int n, int fd);
 void						ft_putstr_fd(char *s, int fd);
 void					*ft_free_unfished_array_of_strings(char **s, int i);
 char					**ft_split(char const *s, char c);
+void					ft_free_the_split(char **data);
 char					*ft_strchr(const char *s, int c);
 char					*ft_strdup(const char *s);
 void					ft_striteri(char *s, void (*f)(unsigned int, char *));
