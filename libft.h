@@ -6,7 +6,7 @@
 /*   By: nildruon <nildruon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 16:21:27 by nildruon          #+#    #+#             */
-/*   Updated: 2026/08/20 15:40:33 by nildruon         ###   ########.fr       */
+/*   Updated: 2026/08/23 16:33:34 by nildruon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void					*ft_memset(void *s, int c, size_t n);
 void					ft_putchar_fd(char c, int fd);
 void					ft_putendl_fd(char *s, int fd);
 void					ft_putnbr_fd(int n, int fd);
-void						ft_putstr_fd(char *s, int fd);
+void					ft_putstr_fd(char *s, int fd);
 void					*ft_free_unfished_array_of_strings(char **s, int i);
 char					**ft_split(char const *s, char c);
 void					ft_free_the_split(char **data);
@@ -65,32 +65,35 @@ char					*ft_strjoin_three(char const *s1, char const *s2,
 size_t					ft_strlcat(char *dst, const char *src, size_t size);
 size_t					ft_strlcpy(char *dst, const char *src, size_t size);
 size_t					ft_strlen(const char *s);
-char					*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char					*ft_strmapi(char const *s,
+							char (*f)(unsigned int, char));
 int						ft_strncmp(const char *s1, const char *s2, size_t n);
 int						ft_strcmp(const char *s1, const char *s2);
 char					*ft_strnstr(const char *big, const char *little,
-						size_t len);
+							size_t len);
 char					*ft_strrchr(const char *s, int c);
 char					*ft_strtrim(char const *s1, char const *set);
-char					*ft_substr(char const *s, unsigned int start, size_t len);
+char					*ft_substr(char const *s, unsigned int start,
+							size_t len);
 int						ft_tolower(int c);
 int						ft_toupper(int c);
-size_t					ft_get_biggest_s(char    *s1, char   *s2);
+size_t					ft_get_biggest_s(char	*s1, char	*s2);
 t_single_linked_node	*ft_single_lstnew(void *content);
 t_double_linked_node	*ft_double_lstnew(void *content);
 void					ft_loop_dbl_lstadd(t_double_linked_node **lst,
-					t_double_linked_node *new_node);
-void					ft_single_lstclear(t_single_linked_node **lst, void (*del)(void*));
+							t_double_linked_node *new_node);
+void					ft_single_lstclear(t_single_linked_node **lst,
+							void (*del)(void*));
 void					ft_lstadd_back_single_linked(t_single_linked_node **lst,
-			t_single_linked_node *new);
+							t_single_linked_node *new);
 void					ft_single_lstadd_front(t_single_linked_node **lst,
-		t_single_linked_node *new);
-int		ft_single_lstsize(t_single_linked_node *lst);
-void	ft_looped_lstclear(t_double_linked_node **lst);
+							t_single_linked_node *new);
+int						ft_single_lstsize(t_single_linked_node *lst);
+void					ft_looped_lstclear(t_double_linked_node **lst);
 // Printf
-int					print_hex(char c, uintptr_t nb, int len);
-int					print_pointer(void *ptr);
-int					putnbr_u_int(unsigned int n, int len);
-int					ft_printf(const char *format, ...);
+int						print_hex(char c, uintptr_t nb, int len);
+int						print_pointer(void *ptr);
+int						putnbr_u_int(unsigned int n, int len);
+int						ft_printf(const char *format, ...);
 
 #endif

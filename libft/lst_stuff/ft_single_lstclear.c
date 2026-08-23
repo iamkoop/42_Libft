@@ -6,7 +6,7 @@
 /*   By: nildruon <nildruon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 15:38:21 by nildruon          #+#    #+#             */
-/*   Updated: 2026/05/25 16:52:19 by nildruon         ###   ########.fr       */
+/*   Updated: 2026/08/23 16:38:34 by nildruon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_single_lstclear(t_single_linked_node **lst, void (*del)(void*))
 	{
 		tmp = curr;
 		curr = curr->next;
-		if(del)
+		if (del)
 			del(tmp->content);
 		free(tmp);
 	}
