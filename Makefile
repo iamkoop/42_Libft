@@ -6,7 +6,7 @@
 #    By: nildruon <nildruon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 14:28:47 by nildruon          #+#    #+#              #
-#    Updated: 2026/08/20 15:45:56 by nildruon         ###   ########.fr        #
+#    Updated: 2026/08/27 16:27:50 by nildruon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ REMOVE = rm -f
 
 all: $(NAME)
 $(NAME): $(HEADER) $(OFILES)
-	$(CREATE) $(NAME) $?
+	$(CREATE) $(NAME) $(OFILES)
 
 fclean: clean
 	$(REMOVE) $(NAME)
